@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head>
+    <title>Number Possibilities</title>
+</head>
+<body>
+    <h1>Odds of number occurring</h1>
+    <div id="masterDiv">
+        <div id="headerDiv">Rounds: 0</div>
+        <div id="splitDiv">
+            <div id="leftNumbers">
+                <div id="num2">1 / 2 : 0</div>
+                <div id="num3">1 / 3 : 0</div>
+                <div id="num4">1 / 4 : 0</div>
+                <div id="num5">1 / 5 : 0</div>
+                <div id="num10">1 / 10 : 0</div>
+
+                <div id="num25">1 / 25 : 0</div>
+                <div id="num50">1 / 50 : 0</div>
+                <div id="num100">1 / 100 : 0</div>
+                <div id="num250">1 / 250 : 0</div>
+                <div id="num1000">1 / 1,000 : 0</div>
+            </div>
+            <div id="rightNumbers">
+                <div id="num10000">1 / 10,000 : 0</div>
+                <div id="num25000">1 / 25,000 : 0</div>
+                <div id="num100000">1 / 100,000 : 0</div>
+                <div id="num250000">1 / 250,000 : 0</div>
+                <div id="num1000000">1 / 1,000,000 : 0</div>
+
+                <div id="num5000000">1 / 5,000,000 : 0</div>
+                <div id="num10000000">1 / 10,000,000 : 0</div>
+                <div id="num25000000">1 / 25,000,000 : 0</div>
+                <div id="num50000000">1 / 50,000,000 : 0</div>
+                <div id="num100000000">1 / 100,000,000 : 0</div>
+
+
+            </div>
+        </div>
+    </div>
+    <div></div>
+</body>
+<style>
+    h1, body {
+        text-align: center;
+        background-color: black;
+        color: grey;
+        font-size: 45px;
+        font-family: Monospace;
+
+    }
+
+    #leftNumbers: {
+        
+    } 
+
+    #masterDiv {
+        font-size: 30px;
+        border: 3px solid grey;
+        margin: 0 200px 0 200px;
+    }
+
+    #splitDiv {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+</style>
+<script>
+var hdv = 0
+var n2v = 0;
+var n3v = 0;
+var n4v = 0;
+var n5v = 0;
+var n10v = 0;
+var n25v = 0;
+var n50v = 0;
+var n100v = 0;
+var n250v = 0;
+var n1000v = 0;
+
+var n10000v = 0;
+var n25000v = 0;
+var n100000v = 0;
+var n250000v = 0;
+var n1000000v = 0;
+var n5000000v = 0;
+var n10000000v = 0;
+var n25000000v = 0;
+var n50000000v = 0;
+var n100000000v = 0;
+
+var headerDiv = document.getElementById("headerDiv")
+var num2 = document.getElementById("num2")
+var num3 = document.getElementById("num3")
+var num4 = document.getElementById("num4")
+var num5 = document.getElementById("num5")
+var num10 = document.getElementById("num10")
+var num25 = document.getElementById("num25")
+var num50 = document.getElementById("num50")
+var num100 = document.getElementById("num100")
+var num250 = document.getElementById("num250")
+var num1000 = document.getElementById("num1000")
+
+var num10000 = document.getElementById("num10000")
+var num25000 = document.getElementById("num25000")
+var num100000 = document.getElementById("num100000")
+var num250000 = document.getElementById("num250000")
+var num1000000 = document.getElementById("num1000000")
+var num5000000 = document.getElementById("num5000000")
+var num10000000 = document.getElementById("num10000000")
+var num25000000 = document.getElementById("num25000000")
+var num50000000 = document.getElementById("num50000000")
+var num100000000 = document.getElementById("num100000000")
+
+var myInterval = setInterval(function () {
+hdv++;
+headerDiv.innerHTML = "Rounds : " + hdv;
+var percent2 = (n2v / hdv * 100).toFixed(2);
+var percent3 = (n3v / hdv * 100).toFixed(2);
+var percent4 = (n4v / hdv * 100).toFixed(2);
+var percent5 = (n5v / hdv * 100).toFixed(2);
+var percent10 = (n10v / hdv * 100).toFixed(2);
+var percent25 = (n25v / hdv * 100).toFixed(2);
+var percent50 = (n50v / hdv * 100).toFixed(2);
+var percent100 = (n100v / hdv * 100).toFixed(2);
+var percent250 = (n250v / hdv * 100).toFixed(2);
+var percent1000 = (n1000v / hdv * 100).toFixed(2);
+
+var percent10000 = (n10000v / hdv * 100).toFixed(4);
+var percent25000 = (n25000v / hdv * 100).toFixed(4);
+var percent100000 = (n100000v / hdv * 100).toFixed(4);
+var percent250000 = (n250000v / hdv * 100).toFixed(4);
+var percent1000000 = (n1000000v / hdv * 100).toFixed(4);
+var percent5000000 = (n5000000v / hdv * 100).toFixed(5);
+var percent10000000 = (n10000000v / hdv * 100).toFixed(6);
+var percent25000000 = (n25000000v / hdv * 100).toFixed(7);
+var percent50000000 = (n50000000v / hdv * 100).toFixed(8);
+var percent100000000 = (n100000000v / hdv * 100).toFixed(8);
+
+
+var ranNum2 = Math.ceil(Math.random() * 2);
+if (ranNum2 == 1) {
+    n2v++;
+    num2.innerHTML = "1 / 2 : " + n2v + " (" + percent2 + "%)"; 
+    
+}
+
+var ranNum3 = Math.ceil(Math.random() * 3);
+if (ranNum3 == 1) {
+    n3v++;
+    num3.innerHTML = "1 / 3 : " + n3v + " (" + percent3 + "%)"; 
+}
+
+var ranNum4 = Math.ceil(Math.random() * 4);
+if (ranNum4 == 1) {
+    n4v++;
+    num4.innerHTML = "1 / 4 : " + n4v + " (" + percent4 + "%)"; 
+}
+
+var ranNum5 = Math.ceil(Math.random() * 5);
+if (ranNum5 == 1) {
+    n5v++;
+    num5.innerHTML = "1 / 5 : " + n5v + " (" + percent5 + "%)"; 
+}
+
+var ranNum10 = Math.ceil(Math.random() * 10);
+if (ranNum10 == 1) {
+    n10v++;
+    num10.innerHTML = "1 / 10 : " + n10v + " (" + percent10 + "%)"; 
+}
+
+var ranNum25 = Math.ceil(Math.random() * 25);
+if (ranNum25 == 1) {
+    n25v++;
+    num25.innerHTML = "1 / 25 : " + n25v + " (" + percent25 + "%)"; 
+}
+
+var ranNum50 = Math.ceil(Math.random() * 50);
+if (ranNum50 == 1) {
+    n50v++;
+    num50.innerHTML = "1 / 50 : " + n50v + " (" + percent50 + "%)"; 
+}
+
+var ranNum100 = Math.ceil(Math.random() * 100);
+if (ranNum100 == 1) {
+    n100v++;
+    num100.innerHTML = "1 / 100 : " + n100v + " (" + percent100 + "%)"; 
+}
+
+var ranNum250 = Math.ceil(Math.random() * 250);
+if (ranNum250 == 1) {
+    n250v++;
+    num250.innerHTML = "1 / 250 : " + n250v + " (" + percent250 + "%)"; 
+}
+
+var ranNum1000 = Math.ceil(Math.random() * 1000);
+if (ranNum1000 == 1) {
+    n1000v++;
+    num1000.innerHTML = "1 / 1,000 : " + n1000v + " (" + percent1000 + "%)"; 
+}
+
+
+var ranNum10000 = Math.ceil(Math.random() * 10000);
+if (ranNum10000 == 1) {
+    n10000v++;
+    num10000.innerHTML = "1 / 10,000 : " + n10000v + " (" + percent10000 + "%)"; 
+}
+
+var ranNum25000 = Math.ceil(Math.random() * 25000);
+if (ranNum25000 == 1) {
+    n25000v++;
+    num25000.innerHTML = "1 / 25,000 : " + n25000v + " (" + percent25000 + "%)"; 
+}
+
+var ranNum100000 = Math.ceil(Math.random() * 100000);
+if (ranNum100000 == 1) {
+    n100000v++;
+    num100000.innerHTML = "1 / 100,000 : " + n100000v + " (" + percent100000 + "%)"; 
+}
+
+var ranNum250000 = Math.ceil(Math.random() * 250000);
+if (ranNum250000 == 1) {
+    n250000v++;
+    num250000.innerHTML = "1 / 250,000 : " + n250000v + " (" + percent250000 + "%)"; 
+}
+
+var ranNum1000000 = Math.ceil(Math.random() * 1000000);
+if (ranNum1000000 == 1) {
+    n1000000v++;
+    num1000000.innerHTML = "1 / 1,000,000 : " + n1000000v + " (" + percent1000000 + "%)"; 
+}
+
+var ranNum5000000 = Math.ceil(Math.random() * 5000000);
+if (ranNum5000000 == 1) {
+    n5000000v++;
+    num5000000.innerHTML = "1 / 5,000,000 : " + n5000000v + " (" + percent5000000 + "%)"; 
+}
+
+var ranNum10000000 = Math.ceil(Math.random() * 10000000);
+if (ranNum10000000 == 1) {
+    n10000000v++;
+    num10000000.innerHTML = "1 / 10,000,000 : " + n10000000v + " (" + percent10000000 + "%)"; 
+}
+
+var ranNum25000000 = Math.ceil(Math.random() * 25000000);
+if (ranNum25000000 == 1) {
+    n25000000v++;
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)"; 
+}
+
+var ranNum50000000 = Math.ceil(Math.random() * 50000000);
+if (ranNum50000000 == 1) {
+    n50000000v++;
+    num50000000.innerHTML = "1 / 50,000,000 : " + n50000000v + " (" + percent50000000 + "%)"; 
+}
+
+var ranNum100000000 = Math.ceil(Math.random() * 100000000);
+if (ranNum100000000 == 1) {
+    n100000000v++;
+    num100000000.innerHTML = "1 / 100,000,000 : " + n100000000v + " (" + percent100000000 + "%)"; 
+}
+}, 1)
+</script>
