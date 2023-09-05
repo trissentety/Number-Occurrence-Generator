@@ -76,6 +76,7 @@
         height: 400px;
         font-size: 25px;
         text-align: center;
+
     }
 
     #splitDiv {
@@ -356,7 +357,7 @@ var ranNum10000 = Math.ceil(Math.random() * 10000);
 if (ranNum10000 == 1) {
     n10000v++;
     num10000.innerHTML = "1 / 10,000 : " + n10000v + " (" + percent10000 + "%) Round: " + hdv; 
-    document.getElementById("results1").innerHTML += "\nCount:" + n10000v + " (" + percent10000 + "%) Round: " + hdv + `\n`;
+    document.getElementById("results1").innerHTML += "\nCount:" + n10000v + " (" + percent10000 + "%) Round: " + hdv;
     if ((n10000v * 10000) > hdv && n10000v !== 0) {
         num10000.style.color = "green";
     } 
@@ -378,7 +379,7 @@ var ranNum25000 = Math.ceil(Math.random() * 25000);
 if (ranNum25000 == 1) {
     n25000v++;
     num25000.innerHTML = "1 / 25,000 : " + n25000v + " (" + percent25000 + "%) Round: " + hdv; 
-    document.getElementById("results2").innerHTML += "\nCount:" + n25000v + " (" + percent25000 + "%) Round: " + hdv + `\n`;
+    document.getElementById("results2").innerHTML += "\nCount:" + n25000v + " (" + percent25000 + "%) Round: " + hdv;
 
     if ((n25000v * 25000) > hdv && n25000v !== 0) {
         num25000.style.color = "green";
