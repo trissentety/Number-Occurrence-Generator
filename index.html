@@ -170,11 +170,11 @@ var percent1000 = (n1000v / hdv * 100).toFixed(2);
 
 var percent10000 = (n10000v / hdv * 100).toFixed(4);
 var percent25000 = (n25000v / hdv * 100).toFixed(4);
-var percent100000 = (n100000v / hdv * 100).toFixed(4);
-var percent250000 = (n250000v / hdv * 100).toFixed(4);
-var percent1000000 = (n1000000v / hdv * 100).toFixed(5);
-var percent5000000 = (n5000000v / hdv * 100).toFixed(5);
-var percent10000000 = (n10000000v / hdv * 100).toFixed(6);
+var percent100000 = (n100000v / hdv * 100).toFixed(5);
+var percent250000 = (n250000v / hdv * 100).toFixed(5);
+var percent1000000 = (n1000000v / hdv * 100).toFixed(6);
+var percent5000000 = (n5000000v / hdv * 100).toFixed(6);
+var percent10000000 = (n10000000v / hdv * 100).toFixed(7);
 var percent25000000 = (n25000000v / hdv * 100).toFixed(7);
 var percent50000000 = (n50000000v / hdv * 100).toFixed(8);
 var percent100000000 = (n100000000v / hdv * 100).toFixed(8);
@@ -654,7 +654,6 @@ if ((n100000000v * 100000000 * 2) < hdv && n100000000v !== 0) {
 var ranNum1500000000 = Math.ceil(Math.random() * 1500000000);
 if (ranNum1500000000 == 1) {
     n1500000000v++;
-    num1500000000.style.display = "flex";
     num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%) Round: " + hdv;
     document.getElementById("results10").innerHTML += "\nCount: " + n1500000000v + " (" + percent1500000000 + "%) Round: " + hdv + `\n`;
 
