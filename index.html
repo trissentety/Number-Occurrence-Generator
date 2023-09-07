@@ -37,11 +37,11 @@
 
             </div>
         </div>
-        <h4 title="Colors update after every round"><span style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
+        <h4 id="h4id" data-title=" Colors update after every round"><span style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
 
     </div>
     <div id="center">
-        <textarea id="results">1/1,000 Scoring Rounds: </textarea>
+        <textarea id="results" maxlength="10" wrap="hard">1/1,000 Scoring Rounds: </textarea>
         <textarea id="results1">1/10,000 Scoring Rounds: </textarea>
         <textarea id="results2">1/25,000 Scoring Rounds: </textarea>
         <textarea id="results3">1/100,000 Scoring Rounds: </textarea>
@@ -78,6 +78,22 @@
         border: 3px solid grey;
         margin: 0 200px 0 200px;
     }
+    [data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: black;
+    color: grey;
+    white-space: nowrap;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+}
+
 
     #num1500000000 {
         display: none;
