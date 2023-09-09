@@ -633,8 +633,10 @@ if (n50v * 50 > hdv * 1.01) {
 if ((n50v * 50 * 1.01) < hdv && n50v !== 0) {
     num50.style.color = "#C967DA";
     num50.innerHTML = "1 / 50 : " + n50v + " (" + percent50 + "%)";
-
 } 
+if (n50v == 0) {
+    num50.innerHTML = "1 / 50 : " + n50v + " (" + percent50 + "%)";
+}
 
 var ranNum100 = Math.ceil(Math.random() * 100);
 if (ranNum100 == 1) {
@@ -663,6 +665,10 @@ if ((n100v * 100 * 1.01) < hdv && n100v !== 0) {
     num100.style.color = "#C967DA";
     num100.innerHTML = "1 / 100 : " + n100v + " (" + percent100 + "%)";
 } 
+if (n100v == 0) {
+    num100.innerHTML = "1 / 100 : " + n100v + " (" + percent100 + "%)";
+}
+
 
 var ranNum250 = Math.ceil(Math.random() * 250);
 if (ranNum250 == 1) {
@@ -693,6 +699,9 @@ if ((n250v * 250 * 1.01) < hdv  && n250v !== 0) {
     num250.style.color = "#C967DA";
     num250.innerHTML = "1 / 250 : " + n250v + " (" + percent250 + "%)";
 } 
+if (n250v == 0) {
+    num250.innerHTML = "1 / 250 : " + n250v + " (" + percent250 + "%)";
+}
 
 
 var ranNum1000 = Math.ceil(Math.random() * 1000);
@@ -724,6 +733,10 @@ if ((n1000v * 1000 * 1.01) < hdv  && n1000v !== 0) {
     num1000.style.color = "#C967DA";
     num1000.innerHTML = "1 / 1,000 : " + n1000v + " (" + percent1000 + "%)";
 } 
+if (n1000v == 0) {
+    num1000.innerHTML = "1 / 1,000 : " + n1000v + " (" + percent1000 + "%)";
+}
+
 
 
 var ranNum10000 = Math.ceil(Math.random() * 10000);
@@ -754,6 +767,9 @@ if ((n10000v * 10000 * 1.01) < hdv  && n10000v !== 0) {
     num10000.style.color = "#C967DA";
     num10000.innerHTML = "1 / 10,000 : " + n10000v + " (" + percent10000 + "%) "; 
 } 
+if (n10000v == 0) {
+    num10000.innerHTML = "1 / 10,000 : " + n10000v + " (" + percent10000 + "%) "; 
+}
 
 var ranNum25000 = Math.ceil(Math.random() * 25000);
 if (ranNum25000 == 1) {
@@ -784,6 +800,9 @@ if ((n25000v * 25000 * 1.01) < hdv && n25000v !== 0) {
     num25000.style.color = "#C967DA";
     num25000.innerHTML = "1 / 25,000 : " + n25000v + " (" + percent25000 + "%)"; 
 } 
+if (n25000v == 0) {
+    num25000.innerHTML = "1 / 25,000 : " + n25000v + " (" + percent25000 + "%)"; 
+}
 
 var ranNum100000 = Math.ceil(Math.random() * 100000);
 if (ranNum100000 == 1) {
@@ -814,6 +833,9 @@ if ((n100000v * 100000 * 1.01) < hdv && n100000v !== 0) {
     num100000.innerHTML = "1 / 100,000 : " + n100000v + " (" + percent100000 + "%)"; 
     num100000.style.color = "#C967DA";
 } 
+if (n100000v == 0) {
+    num100000.innerHTML = "1 / 100,000 : " + n100000v + " (" + percent100000 + "%)"; 
+}
 
 var ranNum250000 = Math.ceil(Math.random() * 250000);
 if (ranNum250000 == 1) {
@@ -844,6 +866,9 @@ if ((n250000v * 250000 * 1.01) < hdv && n250000v !== 0) {
     num250000.style.color = "#C967DA";
     num250000.innerHTML = "1 / 250,000 : " + n250000v + " (" + percent250000 + "%)";
 } 
+if (n250000v == 0) {
+    num250000.innerHTML = "1 / 250,000 : " + n250000v + " (" + percent250000 + "%)";
+}
 
 
 var ranNum1000000 = Math.ceil(Math.random() * 1000000);
@@ -875,6 +900,9 @@ if ((n1000000v * 1000000 * 1.01) < hdv && n1000000v !== 0) {
     num1000000.style.color = "#C967DA";
     num1000000.innerHTML = "1 / 1,000,000 : " + n1000000v + " (" + percent1000000 + "%)";
 } 
+if (n1000000v == 0) {
+    num1000000.innerHTML = "1 / 1,000,000 : " + n1000000v + " (" + percent1000000 + "%)";
+}
 
 var ranNum5000000 = Math.ceil(Math.random() * 5000000);
 if (ranNum5000000 == 1) {
@@ -905,6 +933,9 @@ if ((n5000000v * 5000000 * 1.01) < hdv && n5000000v !== 0) {
     num5000000.style.color = "#C967DA";
     num5000000.innerHTML = "1 / 5,000,000 : " + n5000000v + " (" + percent5000000 + "%)";
 } 
+if (n5000000v == 0) {
+    num5000000.innerHTML = "1 / 5,000,000 : " + n5000000v + " (" + percent5000000 + "%)";
+}
 
 var ranNum10000000 = Math.ceil(Math.random() * 10000000);
 if (ranNum10000000 == 1) {
@@ -930,11 +961,13 @@ if (n10000000v * 10000000 > hdv * 1.01) {
 if ((n10000000v * 10000000 * 1.01) < hdv && n10000000v !== 0) {
     num10000000.style.color = "#C967DA";
     num10000000.innerHTML = "1 / 10,000,000 : " + n10000000v + " (" + percent10000000 + "%)";} 
+    if (n10000000v == 0) {
+        num10000000.innerHTML = "1 / 10,000,000 : " + n10000000v + " (" + percent10000000 + "%)";} 
 
 var ranNum25000000 = Math.ceil(Math.random() * 25000000);
 if (ranNum25000000 == 1) {
     n25000000v++;
-    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%) Round: " + hdv;
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
     document.getElementById("results8").innerHTML += "\nCount: " + n25000000v + " (" + percent25000000 + "%)";
     if ((n25000000v * 25000000) > hdv && n25000000v !== 0) {
         num25000000.style.color = "green";
@@ -945,16 +978,23 @@ if (ranNum25000000 == 1) {
 }
 if ((n25000000v * 25000000) < hdv && hdv > 25000000) {
     num25000000.style.color = "purple";
-    document.getElementById("results8").innerHTML += "\nCount: " + n25000000v + " (" + percent25000000 + "%)";} 
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
+} 
 if (n25000000v * 25000000 > hdv * 1 && n25000000v * 25000000 <  hdv * 2) {
     num25000000.style.color = "green";
-    document.getElementById("results8").innerHTML += "\nCount: " + n25000000v + " (" + percent25000000 + "%)";} 
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
+} 
 if (n25000000v * 25000000 > hdv * 1.01) {
     num25000000.style.color = "gold";
-    document.getElementById("results8").innerHTML += "\nCount: " + n25000000v + " (" + percent25000000 + "%)";} 
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
+} 
 if ((n25000000v * 25000000 * 1.01) < hdv && n25000000v !== 0) {
     num25000000.style.color = "#C967DA";
-    document.getElementById("results8").innerHTML += "\nCount: " + n25000000v + " (" + percent25000000 + "%)";} 
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
+} 
+if (n25000000v == 0) {
+    num25000000.innerHTML = "1 / 25,000,000 : " + n25000000v + " (" + percent25000000 + "%)";
+}
 
 var ranNum50000000 = Math.ceil(Math.random() * 50000000);
 if (ranNum50000000 == 1) {
@@ -985,6 +1025,9 @@ if ((n50000000v * 50000000 * 1.01) < hdv && n50000000v !== 0) {
     num50000000.style.color = "#C967DA";
     num50000000.innerHTML = "1 / 50,000,000 : " + n50000000v + " (" + percent50000000 + "%)";
 } 
+if (n50000000v == 0) {
+    num50000000.innerHTML = "1 / 50,000,000 : " + n50000000v + " (" + percent50000000 + "%)";
+}
 
 var ranNum100000000 = Math.ceil(Math.random() * 100000000);
 if (ranNum100000000 == 1) {
@@ -1016,8 +1059,10 @@ if (n100000000v * 100000000 > hdv * 1.01) {
 if ((n100000000v * 100000000 * 1.01) < hdv && n100000000v !== 0) {
     num100000000.style.color = "#C967DA";
     num100000000.innerHTML = "1 / 100,000,000 : " + n100000000v + " (" + percent100000000 + "%)";
-
 } 
+if (n100000000v == 0) {
+    num100000000.innerHTML = "1 / 100,000,000 : " + n100000000v + " (" + percent100000000 + "%)";
+}
 
 var ranNum1500000000 = Math.ceil(Math.random() * 1500000000);
 if (ranNum1500000000 == 1) {
@@ -1050,8 +1095,10 @@ if ((n1500000000v * 1500000000 * 1.01) < hdv && n1500000000v !== 0) {
     num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 
 } 
-
+if (n1500000000v == 0)
+num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 }
+
 
 , 1)
 
