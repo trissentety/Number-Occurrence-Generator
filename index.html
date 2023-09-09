@@ -203,7 +203,13 @@ Expected Output: 0.0000000666%
             </div>
         </div>
         <h4 id="h4id" data-title=" Colors update after every round"><span style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
-        <h4 id ="balance"></h4>
+        
+        <div id="balancer">
+            <h4 id ="balance"></h4>
+            <pre id="t22"></pre>
+
+        </div>
+
     </div>
     <div id="center">
         <textarea id="results" maxlength="10" wrap="hard">1/1,000 Scoring Rounds: </textarea>
@@ -301,7 +307,7 @@ Expected Output: 0.0000000666%
     }
 
     #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9, #t10,
-    #t11, #t12, #t13, #t14, #t15, #t16, #t17, #t18, #t19, #t20, #t21     {
+    #t11, #t12, #t13, #t14, #t15, #t16, #t17, #t18, #t19, #t20, #t21, #t22     {
         position: fixed;
         display: block;
         opacity: 0;
@@ -333,7 +339,8 @@ Expected Output: 0.0000000666%
     #tdiv18:hover #t18, 
     #tdiv19:hover #t19, 
     #tdiv20:hover #t20, 
-    #tdiv21:hover #t21 {
+    #tdiv21:hover #t21,
+    #balancer:hover #t22 {
         opacity: 1;
         visibility: visible;
         transition: all 0.1s ease 0.5s;
@@ -1277,7 +1284,20 @@ if (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a
     balance.innerHTML = "Balance: ~"
 }
 
+var Pcount = 0;
+var Gcount = 0;
 
+pCount = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a20 + a21
+gCount = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10 + b11 + b12 + b13 + b14 + b15 + b16 + b17 + b18 + b19 + b20 + b21
+
+var t22 = document.getElementById("t22")
+t22.innerHTML = pCount + "/" + gCount;
+window.onmousemove = function(e) {
+    var x = e.clientX,
+        y = e.clientY;
+    t22.style.top = (y + 5) + 'px';
+    t22.style.left = (x + 5) + 'px';
+}
 
 
 
