@@ -203,7 +203,7 @@ Expected Output: 0.0000000666%
             </div>
         </div>
         <h4 id="h4id" data-title=" Colors update after every round"><span style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
-
+        <h4 id ="balance"></h4>
     </div>
     <div id="center">
         <textarea id="results" maxlength="10" wrap="hard">1/1,000 Scoring Rounds: </textarea>
@@ -431,7 +431,6 @@ var percent25000000 = (n25000000v / hdv * 100).toFixed(7);
 var percent50000000 = (n50000000v / hdv * 100).toFixed(8);
 var percent100000000 = (n100000000v / hdv * 100).toFixed(8);
 var percent1500000000 = (n1500000000v / hdv * 100).toFixed(9);
-
 
 var ranNum2 = Math.ceil(Math.random() * 2);
 if (ranNum2 == 1) {
@@ -1095,9 +1094,198 @@ if ((n1500000000v * 1500000000 * 1.01) < hdv && n1500000000v !== 0) {
     num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 
 } 
+
+var balance = document.getElementById("balance")
+var a1 = 0;
+var b1 = 0;
+var a2 = 0;
+var b2 = 0;
+var a3 = 0;
+var b3 = 0;
+var a4 = 0;
+var b4 = 0;
+var a5 = 0;
+var b5 = 0;
+var a6 = 0;
+var b6 = 0;
+var a7 = 0;
+var b7 = 0;
+var a8 = 0;
+var b8 = 0;
+var a9 = 0;
+var b9 = 0;
+var a10 = 0;
+var b10 = 0;
+var a11 = 0;
+var b11 = 0;
+var a12 = 0;
+var b12 = 0;
+var a13 = 0;
+var b13 = 0;
+var a14 = 0;
+var b14 = 0;
+var a15 = 0;
+var b15 = 0;
+var a16 = 0;
+var b16 = 0;
+var a17 = 0;
+var b17 = 0;
+var a18 = 0;
+var b18 = 0;
+var a19 = 0;
+var b19 = 0;
+var a20 = 0;
+var b20 = 0;
+var a21 = 0;
+var b21 = 0;
+if ((n2v * 2) > hdv && n2v !== 0) {
+    a1 = 1;
+} 
+if ((n2v * 2) < hdv && n2v !== 0) {
+    b1 = 1;
+} 
+if ((n3v * 3) > hdv && n3v !== 0) {
+    a2 = 1;
+} 
+if ((n3v * 3) < hdv && n3v !== 0) {
+    b2 = 1;
+} 
+if ((n4v * 4) > hdv && n4v !== 0) {
+    a3 = 1;
+} 
+if ((n4v * 4) < hdv && n4v !== 0) {
+    b3 = 1;
+} 
+if ((n5v * 5) > hdv && n5v !== 0) {
+    a4 = 1;
+} 
+if ((n5v * 5) < hdv && n5v !== 0) {
+    b4 = 1;
+} 
+if ((n10v * 10) > hdv && n10v !== 0) {
+    a5 = 1;
+} 
+if ((n10v * 10) < hdv && n10v !== 0) {
+    b5 = 1;
+} 
+if ((n25v * 25) > hdv && n25v !== 0) {
+    a6 = 1;
+} 
+if ((n25v * 25) < hdv && n25v !== 0) {
+    b6 = 1;
+} 
+if ((n50v * 50) > hdv && n50v !== 0) {
+    a7 = 1;
+} 
+if ((n50v * 50) < hdv && n50v !== 0) {
+    b7 = 1;
+} 
+if ((n100v * 100) > hdv && n100v !== 0) {
+    a8 = 1;
+} 
+if ((n100v * 100) < hdv && n100v !== 0) {
+    b8 = 1;
+} 
+if ((n250v * 250) > hdv && n100v !== 0) {
+    a9 = 1;
+} 
+if ((n250v * 250) < hdv && n100v !== 0) {
+    b9 = 1;
+} 
+if ((n1000v * 1000) > hdv && n1000v !== 0) {
+    a10 = 1;
+} 
+if ((n1000v * 1000) < hdv && n1000v !== 0) {
+    b10 = 1;
+} 
+if ((n10000v * 10000) > hdv && n10000v !== 0) {
+    a11 = 1;
+} 
+if ((n10000v * 10000) < hdv && n10000v !== 0) {
+    b11 = 1;
+} 
+if ((n25000v * 25000) > hdv && n25000v !== 0) {
+    a12 = 1;
+} 
+if ((n25000v * 25000) < hdv && n25000v !== 0) {
+    b12 = 1;
+} 
+if ((n100000v * 100000) > hdv && n100000v !== 0) {
+    a13 = 1;
+} 
+if ((n100000v * 100000) < hdv && n100000v !== 0) {
+    b13 = 1;
+} 
+if ((n250000v * 250000) > hdv && n250000v !== 0) {
+    a14 = 1;
+} 
+if ((n250000v * 250000) < hdv && n250000v !== 0) {
+    b14 = 1;
+} 
+if ((n1000000v * 1000000) > hdv && n1000000v !== 0) {
+    a15 = 1;
+} 
+if ((n1000000v * 1000000) < hdv && n1000000v !== 0) {
+    b15 = 1;
+} 
+if ((n5000000v * 5000000) > hdv && n5000000v !== 0) {
+    a16 = 1;
+} 
+if ((n5000000v * 5000000) < hdv && n5000000v !== 0) {
+    b16 = 1;
+} 
+if ((n10000000v * 10000000) > hdv && n10000000v !== 0) {
+    a17 = 1;
+} 
+if ((n10000000v * 10000000) < hdv && n10000000v !== 0) {
+    b17 = 1;
+} 
+if ((n25000000v * 10000000) > hdv && n25000000v !== 0) {
+    a18 = 1;
+} 
+if ((n25000000v * 10000000) < hdv && n25000000v !== 0) {
+    b18 = 1;
+} 
+if ((n50000000v * 50000000) > hdv && n50000000v !== 0) {
+    a19 = 1;
+} 
+if ((n50000000v * 50000000) < hdv && n50000000v !== 0) {
+    b19 = 1;
+} 
+if ((n100000000v * 100000000) > hdv && n100000000v !== 0) {
+    a20 = 1;
+} 
+if ((n100000000v * 100000000) < hdv && n100000000v !== 0) {
+    b20 = 1;
+} 
+if ((n100000000v * 1500000000) > hdv && n100000000v !== 0) {
+    a21 = 1;
+} 
+if ((n1500000000v * 1500000000) < hdv && n1500000000v !== 0) {
+    b21 = 1;
+} 
+
+if (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a20 + a21 > b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10 + b11 + b12 + b13 + b14 + b15 + b16 + b17 + b18 + b19 + b20 + b21) {
+    balance.innerHTML = "Balance: <span style='color: green'>Green</span>"
+}
+
+if (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a20 + a21 < b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10 + b11 + b12 + b13 + b14 + b15 + b16 + b17 + b18 + b19 + b20 + b21) {
+    balance.innerHTML = "Balance: <span style='color: purple'>Purple</span>"
+}
+
+if (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a20 + a21 == b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8 + b9 + b10 + b11 + b12 + b13 + b14 + b15 + b16 + b17 + b18 + b19 + b20 + b21) {
+    balance.innerHTML = "Balance: ~"
+}
+
+
+
+
+
 if (n1500000000v == 0)
 num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 }
+
+
 
 
 , 1)
@@ -1284,5 +1472,7 @@ num1500000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "flex"
 })
+
+
 
 </script>
