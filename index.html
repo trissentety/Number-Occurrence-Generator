@@ -1250,7 +1250,7 @@ if ((n10000000v * 10000000) < hdv && n10000000v !== 0 || hdv > (n10000000v + 1) 
 if ((n25000000v * 10000000) > hdv && n25000000v !== 0) {
     a18 = 1;
 } 
-if ((n25000000v * 10000000) < hdv && n25000000v !== 0 || (hdv > n25000000v + 1) * 25000000) {
+if ((n25000000v * 10000000) < hdv && n25000000v !== 0 || hdv > (n25000000v + 1) * 25000000) {
     b18 = 1;
 } 
 if ((n50000000v * 50000000) > hdv && n50000000v !== 0) {
@@ -1308,7 +1308,7 @@ num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent
 
 
 
-, 1)
+, 5000)
 
 headerDiv.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
