@@ -228,7 +228,7 @@ Expected Chance: 0.0000000666%
         <textarea id="results11">1/1,500,000,000 Scoring Rounds: </textarea>
         <textarea id="results12">1/250 Scoring Rounds: </textarea>
         <div id="results14"><div><span style="color: #C967DA">Luckiest Round</span><br></div></div>
-        <div id="results13"><div><span style="color: gold">Luckiest Round</span><br></div></div>
+        <div id="results13"><div><span style="color: gold">Luckiest Round</span><br></div><div id="luckyMode">See Lucky Mode</div></div>
     </div>
 </body>
 <style>
@@ -438,6 +438,7 @@ var results13 = document.getElementById("results13")
 var results14 = document.getElementById("results14")
 var color;
 var colors = ["Pink", "Purple", "Green", "Gold"]
+var bar = 0
 
 var myInterval = setInterval(function () {
 hdv++;
@@ -464,6 +465,8 @@ var percent25000000 = (n25000000v / hdv * 100).toFixed(7);
 var percent50000000 = (n50000000v / hdv * 100).toFixed(8);
 var percent100000000 = (n100000000v / hdv * 100).toFixed(8);
 var percent1500000000 = (n1500000000v / hdv * 100).toFixed(9);
+
+
 
 var ranNum2 = Math.ceil(Math.random() * 2);
 if (ranNum2 == 1) {
@@ -1542,10 +1545,12 @@ iA.forEach(function (val, i, arr) {
 
 
 
+
 if (luckiestHit2 < currentLuckiest2) {
    currentLuckiest2 = luckiestHit2;
    results14.innerHTML += "<span style='color: #b50000'>" + luckiestHit2 + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
    lucky2.innerHTML = "<span style='color: #C967DA'>Luckiest: <span style='color: #b50000'>" + luckiestHit2 + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
+   uA = [];
 }
 
 
@@ -1561,6 +1566,147 @@ if (luckiestHit > currentLuckiest) {
 }
 }
 iA = [];
+
+
+var luckyMode = document.getElementById("luckyMode")
+luckyMode.addEventListener("click", function() { 
+    bar ++
+    if (bar == 2){
+    luckyMode.innerHTML = "Lucky Mode"
+    bar = 0;
+}
+
+    
+   
+
+})
+if (hdv < 1000) {
+}
+
+if (bar == 1 && hdv > 1000) {
+    luckyMode.innerHTML = "Normal Mode"
+    n2v = 0;
+    n3v = 0
+    n4v = 0
+    n5v = 0
+    n10v = 0
+    n25v = 0
+    n50v = 0
+    n100v = 0
+    n250v = 0
+    n1000v = 0
+    n10000v = 0
+    n25000v = 0
+    n100000v = 0
+    hdv = 0;
+    var a1 = 0;
+var b1 = 0;
+var a2 = 0;
+var b2 = 0;
+var a3 = 0;
+var b3 = 0;
+var a4 = 0;
+var b4 = 0;
+var a5 = 0;
+var b5 = 0;
+var a6 = 0;
+var b6 = 0;
+var a7 = 0;
+var b7 = 0;
+var a8 = 0;
+var b8 = 0;
+var a9 = 0;
+var b9 = 0;
+var a10 = 0;
+var b10 = 0;
+var a11 = 0;
+var b11 = 0;
+var a12 = 0;
+var b12 = 0;
+var a13 = 0;
+var b13 = 0;
+var a14 = 0;
+var b14 = 0;
+var a15 = 0;
+var b15 = 0;
+var a16 = 0;
+var b16 = 0;
+var a17 = 0;
+var b17 = 0;
+var a18 = 0;
+var b18 = 0;
+var a19 = 0;
+var b19 = 0;
+var a20 = 0;
+var b20 = 0;
+var a21 = 0;
+var b21 = 0;
+}
+
+
+if (bar == 1 && hdv > 1000) {
+    luckyMode.innerHTML = "Normal Mode"
+    n2v = 0;
+    n3v = 0
+    n4v = 0
+    n5v = 0
+    n10v = 0
+    n25v = 0
+    n50v = 0
+    n100v = 0
+    n250v = 0
+    n1000v = 0
+    n10000v = 0
+    n25000v = 0
+    n100000v = 0
+    hdv = 0;
+    var a1 = 0;
+var b1 = 0;
+var a2 = 0;
+var b2 = 0;
+var a3 = 0;
+var b3 = 0;
+var a4 = 0;
+var b4 = 0;
+var a5 = 0;
+var b5 = 0;
+var a6 = 0;
+var b6 = 0;
+var a7 = 0;
+var b7 = 0;
+var a8 = 0;
+var b8 = 0;
+var a9 = 0;
+var b9 = 0;
+var a10 = 0;
+var b10 = 0;
+var a11 = 0;
+var b11 = 0;
+var a12 = 0;
+var b12 = 0;
+var a13 = 0;
+var b13 = 0;
+var a14 = 0;
+var b14 = 0;
+var a15 = 0;
+var b15 = 0;
+var a16 = 0;
+var b16 = 0;
+var a17 = 0;
+var b17 = 0;
+var a18 = 0;
+var b18 = 0;
+var a19 = 0;
+var b19 = 0;
+var a20 = 0;
+var b20 = 0;
+var a21 = 0;
+var b21 = 0;
+}
+
+
+
+
 if (n1500000000v == 0)
 num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 }
