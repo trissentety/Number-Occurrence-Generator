@@ -211,8 +211,11 @@ Expected Chance: 0.0000000666%
         </div>
         <div id="lucky"><p></p></div>
         <div id="lucky2"><p></p></div>
+            <div id="luckyMode">Switch to Lucky Mode</div>
+            <div id="luckyMode2">Switch to Normal Mode</div>
 
     </div>
+
     <div id="center">
         <textarea id="results" maxlength="10" wrap="hard">1/1,000 Scoring Rounds: </textarea>
         <textarea id="results1">1/10,000 Scoring Rounds: </textarea>
@@ -228,7 +231,8 @@ Expected Chance: 0.0000000666%
         <textarea id="results11">1/1,500,000,000 Scoring Rounds: </textarea>
         <textarea id="results12">1/250 Scoring Rounds: </textarea>
         <div id="results14"><div><span style="color: #C967DA">Luckiest Round</span><br></div></div>
-        <div id="results13"><div><span style="color: gold">Luckiest Round</span><br></div><div id="luckyMode">See Lucky Mode</div></div>
+        <div id="results13"><div><span style="color: gold">Luckiest Round</span><br></div></div>
+
     </div>
 </body>
 <style>
@@ -274,7 +278,11 @@ Expected Chance: 0.0000000666%
     visibility: hidden;
 }
 
-
+    #luckyMode, #luckyMode2 {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+    }
     #num1500000000 {
         display: none;
     }
@@ -1568,72 +1576,55 @@ if (luckiestHit > currentLuckiest) {
 }
 
 
-
-var luckyMode = document.getElementById("luckyMode")
-luckyMode.addEventListener("click", function() { 
-    bar ++
-    if (bar == 2){
-    luckyMode.innerHTML = "Lucky Mode"
-    bar = 0;
-}
-
-    
-   
-
-})
-if (hdv < 1000) {
-}
-
 if (bar == 1 && hdv > 1000) {
-    luckyMode.innerHTML = "Normal Mode"
-    n2v = 0;
-    n3v = 0
-    n4v = 0
-    n5v = 0
-    n10v = 0
-    n25v = 0
-    n50v = 0
-    n100v = 0
-    n250v = 0
-    n1000v = 0
-    n10000v = 0
-    n25000v = 0
-    n100000v = 0
-    hdv = 0;
-    var a1 = 0;
-var b1 = 0;
-var a2 = 0;
-var b2 = 0;
-var a3 = 0;
-var b3 = 0;
-var a4 = 0;
-var b4 = 0;
-var a5 = 0;
-var b5 = 0;
-var a6 = 0;
-var b6 = 0;
-var a7 = 0;
-var b7 = 0;
-var a8 = 0;
-var b8 = 0;
-var a9 = 0;
-var b9 = 0;
-var a10 = 0;
-var b10 = 0;
-var a11 = 0;
-var b11 = 0;
-var a12 = 0;
-var b12 = 0;
-var a13 = 0;
-var b13 = 0;
-var a14 = 0;
+       n2v = 0;
+     n3v = 0
+     n4v = 0
+     n5v = 0
+     n10v = 0
+     n25v = 0
+     n50v = 0
+     n100v = 0
+     n250v = 0
+     n1000v = 0
+     n10000v = 0
+     n25000v = 0
+     n100000v = 0
+     hdv = 0;
+     var a1 = 0;
+ var b1 = 0;
+ var a2 = 0;
+ var b2 = 0;
+ var a3 = 0;
+ var b3 = 0;
+ var a4 = 0;
+ var b4 = 0;
+ var a5 = 0;
+ var b5 = 0;
+ var a6 = 0;
+ var b6 = 0;
+ var a7 = 0;
+ var b7 = 0;
+ var a8 = 0;
+ var b8 = 0;
+ var a9 = 0;
+ var b9 = 0;
+ var a10 = 0;
+ var b10 = 0;
+ var a11 = 0;
+ var b11 = 0;
+ var a12 = 0;
+ var b12 = 0;
+ var a13 = 0;
+ var b13 = 0;
+ var a14 = 0;
 var b14 = 0;
 var a15 = 0;
 var b15 = 0;
 var a16 = 0;
 var b16 = 0;
 var a17 = 0;
-var b17 = 0;
+b17 = 0;
 var a18 = 0;
 var b18 = 0;
 var a19 = 0;
@@ -1642,68 +1633,90 @@ var a20 = 0;
 var b20 = 0;
 var a21 = 0;
 var b21 = 0;
+num2.style.color = "grey";
+num3.style.color = "grey";
+num4.style.color = "grey";
+num5.style.color = "grey";
+num10.style.color = "grey";
+num25.style.color = "grey";
+num50.style.color = "grey";
+num100.style.color = "grey";
+num250.style.color = "grey";
+num1000.style.color = "grey";
+
+num10000.style.color = "grey";
+num25000.style.color = "grey";
+num100000.style.color = "grey";
+num250000.style.color = "grey";
+num1000000.style.color = "grey";
+num5000000.style.color = "grey";
+num10000000.style.color = "grey";
+num25000000.style.color = "grey";
+num50000000.style.color = "grey";
+num100000000.style.color = "grey";
+num1500000000.style.color = "grey";
 }
 
 
-if (bar == 1 && hdv > 1000) {
-    luckyMode.innerHTML = "Normal Mode"
-    n2v = 0;
-    n3v = 0
-    n4v = 0
-    n5v = 0
-    n10v = 0
-    n25v = 0
-    n50v = 0
-    n100v = 0
-    n250v = 0
-    n1000v = 0
-    n10000v = 0
-    n25000v = 0
-    n100000v = 0
-    hdv = 0;
-    var a1 = 0;
-var b1 = 0;
-var a2 = 0;
-var b2 = 0;
-var a3 = 0;
-var b3 = 0;
-var a4 = 0;
-var b4 = 0;
-var a5 = 0;
-var b5 = 0;
-var a6 = 0;
-var b6 = 0;
-var a7 = 0;
-var b7 = 0;
-var a8 = 0;
-var b8 = 0;
-var a9 = 0;
-var b9 = 0;
-var a10 = 0;
-var b10 = 0;
-var a11 = 0;
-var b11 = 0;
-var a12 = 0;
-var b12 = 0;
-var a13 = 0;
-var b13 = 0;
-var a14 = 0;
-var b14 = 0;
-var a15 = 0;
-var b15 = 0;
-var a16 = 0;
-var b16 = 0;
-var a17 = 0;
-var b17 = 0;
-var a18 = 0;
-var b18 = 0;
-var a19 = 0;
-var b19 = 0;
-var a20 = 0;
-var b20 = 0;
-var a21 = 0;
-var b21 = 0;
-}
+// if (bar == 1 && hdv > 1000) {
+//     luckyMode.innerHTML = "Normal Mode"
+//     n2v = 0;
+//     n3v = 0
+//     n4v = 0
+//     n5v = 0
+//     n10v = 0
+//     n25v = 0
+//     n50v = 0
+//     n100v = 0
+//     n250v = 0
+//     n1000v = 0
+//     n10000v = 0
+//     n25000v = 0
+//     n100000v = 0
+//     hdv = 0;
+//     var a1 = 0;
+// var b1 = 0;
+// var a2 = 0;
+// var b2 = 0;
+// var a3 = 0;
+// var b3 = 0;
+// var a4 = 0;
+// var b4 = 0;
+// var a5 = 0;
+// var b5 = 0;
+// var a6 = 0;
+// var b6 = 0;
+// var a7 = 0;
+// var b7 = 0;
+// var a8 = 0;
+// var b8 = 0;
+// var a9 = 0;
+// var b9 = 0;
+// var a10 = 0;
+// var b10 = 0;
+// var a11 = 0;
+// var b11 = 0;
+// var a12 = 0;
+// var b12 = 0;
+// var a13 = 0;
+// var b13 = 0;
+// var a14 = 0;
+// var b14 = 0;
+// var a15 = 0;
+// var b15 = 0;
+// var a16 = 0;
+// var b16 = 0;
+// var a17 = 0;
+// var b17 = 0;
+// var a18 = 0;
+// var b18 = 0;
+// var a19 = 0;
+// var b19 = 0;
+// var a20 = 0;
+// var b20 = 0;
+// var a21 = 0;
+// var b21 = 0;
+// }
 
 
 
@@ -1989,5 +2002,21 @@ lucky2.addEventListener("click", function() {
     document.getElementById("results13").style.display = "block"
     document.getElementById("results14").style.display = "block"
 })
+document.getElementById("luckyMode2").style.display = "none"
+var luckyMode = document.getElementById("luckyMode2")
+var luckyMode2 = document.getElementById("luckyMode")
+luckyMode.addEventListener("click", function() { 
+    bar = 0
+    document.getElementById("luckyMode2").style.display = "none"
+    document.getElementById("luckyMode").style.display = "block"
+    
+})
+luckyMode2.addEventListener("click", function() { 
+bar = 1;
+
+document.getElementById("luckyMode").style.display = "none"
+document.getElementById("luckyMode2").style.display = "block"
+})
+
 
 </script>
