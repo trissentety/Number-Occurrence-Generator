@@ -1532,22 +1532,24 @@ if (iA.indexOf(Math.min(...iA)) == 20 && n1500000000v !== 0) {
 }
 
 var luckiestHit2 = Math.min(...uA).toFixed(3);
-
+var mocha = 1;
 iA.forEach(function (val, i, arr) {
-    if (val > 0) {
+    if (val < mocha && val > 0) {
+        mocha = val
         uA.push([val])
     }    
 }) 
 uA.sort()
-console.log(uA.toString())
 
-var luckiestHitI2 = uA.indexOf(Math.min(...uA));
+
+
 if (luckiestHit2 < currentLuckiest2) {
-    
    currentLuckiest2 = luckiestHit2;
    results14.innerHTML += "<span style='color: #b50000'>" + luckiestHit2 + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
    lucky2.innerHTML = "<span style='color: #C967DA'>Luckiest: <span style='color: #b50000'>" + luckiestHit2 + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
 }
+
+
 
 var luckiestHit = Math.max(...iA).toFixed(2);
 var luckiestHitI = iA.indexOf(Math.max(...iA));
@@ -1557,7 +1559,7 @@ if (luckiestHit > currentLuckiest) {
    results13.innerHTML += "<span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
    lucky.innerHTML = " <span style='color: gold'>Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
 }
-
+iA = [];
 if (n1500000000v == 0)
 num1500000000.innerHTML = "1 / 1,500,000,000 : " + n1500000000v + " (" + percent1500000000 + "%)";
 }
