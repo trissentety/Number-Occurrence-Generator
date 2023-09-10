@@ -226,6 +226,7 @@ Expected Output: 0.0000000666%
         <textarea id="results10">1/100,000,000 Scoring Rounds: </textarea>
         <textarea id="results11">1/1,500,000,000 Scoring Rounds: </textarea>
         <textarea id="results12">1/250 Scoring Rounds: </textarea>
+        <div id="results13">Luckiest Round<br></div>
 
     </div>
 </body>
@@ -275,7 +276,7 @@ Expected Output: 0.0000000666%
         display: none;
     }
 
-    #results, #results1, #results2, #results3, #results4, #results5, #results6, #results7, #results8, #results9, #results10, #results11, #results12 {
+    #results, #results1, #results2, #results3, #results4, #results5, #results6, #results7, #results8, #results9, #results10, #results11, #results12, #results13 {
         display: none;
         background-color: black;
         color: grey;
@@ -310,6 +311,12 @@ Expected Output: 0.0000000666%
     #num2 {
         position: relative;
         
+    }
+
+    #results13{
+        display: block;
+        text-align: middle;
+        font-size: 20px;
     }
 
     #t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9, #t10,
@@ -421,6 +428,7 @@ var num50000000 = document.getElementById("num50000000")
 var num100000000 = document.getElementById("num100000000")
 var num1500000000 = document.getElementById("num1500000000")
 
+var results13 = document.getElementById("results13")
 var color;
 var colors = ["Pink", "Purple", "Green", "Gold"]
 
@@ -1430,7 +1438,8 @@ var luckiestHitI = iA.indexOf(Math.max(...iA));
 if (luckiestHit > currentLuckiest) {
    luckiestRound = hdv;
    currentLuckiest = luckiestHit;
-    lucky.innerHTML = " Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  " + luckiestRound + " &#149; Odds: " + maxNV + " &#149; Count: <span style='color: #b50000;'>" + cCount + "</span>"  ;
+   results13.innerHTML += "<span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  " + luckiestRound + " &#149; Odds: " + maxNV + " &#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
+   lucky.innerHTML = " Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  " + luckiestRound + " &#149; Odds: " + maxNV + " &#149; Count: <span style='color: #b50000;'>" + cCount + "</span>"  ;
 }
 console.log(Math.max(...iA).toFixed(4));
 
@@ -1461,6 +1470,7 @@ headerDiv.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num250.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1476,6 +1486,7 @@ num250.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "flex"
+    document.getElementById("results13").style.display = "none"
 })
 num1000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "flex"
@@ -1491,6 +1502,7 @@ num1000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num10000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1506,6 +1518,7 @@ num10000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num25000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1521,6 +1534,7 @@ num25000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num100000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1536,6 +1550,7 @@ num100000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num250000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1551,6 +1566,7 @@ num250000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num1000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1566,6 +1582,7 @@ num1000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num5000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1581,6 +1598,7 @@ num5000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num10000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1596,6 +1614,7 @@ num10000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num25000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1611,6 +1630,7 @@ num25000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num50000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1626,6 +1646,7 @@ num50000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num100000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1641,6 +1662,7 @@ num100000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "flex"
     document.getElementById("results11").style.display = "none"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
 })
 num1500000000.addEventListener("click", function() { 
     document.getElementById("results").style.display = "none"
@@ -1656,6 +1678,24 @@ num1500000000.addEventListener("click", function() {
     document.getElementById("results10").style.display = "none"
     document.getElementById("results11").style.display = "flex"
     document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "none"
+})
+
+lucky.addEventListener("click", function() { 
+    document.getElementById("results").style.display = "none"
+    document.getElementById("results1").style.display = "none"
+    document.getElementById("results2").style.display = "none"
+    document.getElementById("results3").style.display = "none"
+    document.getElementById("results4").style.display = "none"
+    document.getElementById("results5").style.display = "none"
+    document.getElementById("results6").style.display = "none"
+    document.getElementById("results7").style.display = "none"
+    document.getElementById("results8").style.display = "none"
+    document.getElementById("results9").style.display = "none"
+    document.getElementById("results10").style.display = "none"
+    document.getElementById("results11").style.display = "none"
+    document.getElementById("results12").style.display = "none"
+    document.getElementById("results13").style.display = "block"
 })
 
 </script>
