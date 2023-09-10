@@ -209,6 +209,7 @@ Expected Output: 0.0000000666%
             <pre id="t22"></pre>
 
         </div>
+        <div id="lucky"><p></p></div>
 
     </div>
     <div id="center">
@@ -244,6 +245,9 @@ Expected Output: 0.0000000666%
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+    #lucky {
+        font-size: 20px;
     }
     #masterDiv {
         font-size: 30px;
@@ -387,6 +391,11 @@ var numc8;
 var numc9;
 var numc10;
 var numc11;
+
+var currentLuckiest = 0;
+var luckiestRound;
+var maxNV;
+var cCount;
 
 var headerDiv = document.getElementById("headerDiv")
 var num2 = document.getElementById("num2")
@@ -1301,6 +1310,129 @@ window.onmousemove = function(e) {
     t22.style.top = (y + 5) + 'px';
     t22.style.left = (x + 5) + 'px';
 }
+
+//Luckiest Round
+//var lucky = document.getElementById("lucky")
+//if(n3v )
+//Color Changes
+var iA = [];
+iA[0] = n2v * 2 / hdv;
+iA[1] = n3v * 3 / hdv;
+iA[2] = n4v * 4 / hdv;
+iA[3] = n5v * 5 / hdv;
+iA[4] = n10v * 10 / hdv;
+iA[5] = n25v * 25 / hdv;
+iA[6] = n50v * 50 / hdv;
+iA[7] = n100v * 100 / hdv;
+iA[8] = n250v * 250 / hdv;
+iA[9] = n1000v * 1000 / hdv;
+iA[10] = n10000v * 10000 / hdv;
+iA[11] = n25000v * 25000 / hdv;
+iA[12] = n100000v * 100000 / hdv;
+iA[13] = n250000v * 250000 / hdv;
+iA[14] = n1000000v * 1000000 / hdv;
+iA[15] = n5000000v * 5000000 / hdv;
+iA[16] = n10000000v * 10000000 / hdv;
+iA[17] = n25000000v * 25000000 / hdv;
+iA[18] = n50000000v * 50000000 / hdv;
+iA[19] = n100000000v * 100000000 / hdv;
+iA[20] = n1500000000v * 1500000000 / hdv;
+
+if (iA.indexOf(Math.max(...iA)) == 0) {
+    maxNV = "1 / 2"
+    cCount = n2v;
+}
+if (iA.indexOf(Math.max(...iA)) == 1) {
+    maxNV = "1 / 3"
+    cCount = n3v;
+}
+if (iA.indexOf(Math.max(...iA)) == 2) {
+    maxNV = "1 / 4"
+    cCount = n4v;
+}
+if (iA.indexOf(Math.max(...iA)) == 3) {
+    maxNV = "1 / 5"
+    cCount = n5v;
+}
+if (iA.indexOf(Math.max(...iA)) == 4) {
+    maxNV = "1 / 10"
+    cCount = n10v;
+}
+
+if (iA.indexOf(Math.max(...iA)) == 5) {
+    maxNV = "1 / 25"
+    cCount = n25v;
+}
+if (iA.indexOf(Math.max(...iA)) == 6) {
+    maxNV = "1 / 50"
+    cCount = n50v;
+}
+if (iA.indexOf(Math.max(...iA)) == 7) {
+    maxNV = "1 / 100"
+    cCount = n100v;
+}
+if (iA.indexOf(Math.max(...iA)) == 8) {
+    maxNV = "1 / 250"
+    cCount = n250v;
+}
+if (iA.indexOf(Math.max(...iA)) == 9) {
+    maxNV = "1 / 1000"
+    cCount = n1000v;
+}
+
+if (iA.indexOf(Math.max(...iA)) == 10) {
+    maxNV = "1 / 10000"
+    cCount = n10000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 11) {
+    maxNV = "1 / 25000"
+    cCount = n25000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 12) {
+    maxNV = "1 / 100000"
+    cCount = n100000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 13) {
+    maxNV = "1 / 250000"
+    cCount = n250000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 14) {
+    maxNV = "1 / 1000000"
+    cCount = n1000000v;
+}
+
+if (iA.indexOf(Math.max(...iA)) == 15) {
+    maxNV = "1 / 5000000"
+    cCount = n5000000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 16) {
+    maxNV = "1 / 10000000"
+    cCount = n10000000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 17) {
+    maxNV = "1 / 25000000"
+    cCount = n25000000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 18) {
+    maxNV = "1 / 50000000"
+    cCount = n50000000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 19) {
+    maxNV = "1 / 100000000"
+    cCount = n100000000v;
+}
+if (iA.indexOf(Math.max(...iA)) == 20) {
+    maxNV = "1 / 1500000000"
+    cCount = n1500000000v;
+}
+var luckiestHit = Math.max(...iA).toFixed(2);
+var luckiestHitI = iA.indexOf(Math.max(...iA));
+if (luckiestHit > currentLuckiest) {
+   luckiestRound = hdv;
+   currentLuckiest = luckiestHit;
+    lucky.innerHTML = " Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " Round:  " + luckiestRound + " Odds: " + maxNV + " Count: <span style='color: #b50000;'>" + cCount + "</span>"  ;
+}
+console.log(Math.max(...iA).toFixed(4));
 
 
 
