@@ -1438,8 +1438,8 @@ var luckiestHitI = iA.indexOf(Math.max(...iA));
 if (luckiestHit > currentLuckiest) {
    luckiestRound = hdv;
    currentLuckiest = luckiestHit;
-   results13.innerHTML += "<span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  " + luckiestRound + " &#149; Odds: " + maxNV + " &#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
-   lucky.innerHTML = " Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  " + luckiestRound + " &#149; Odds: " + maxNV + " <span style='color: #00eeff'>&#149</span>; Count: <span style='color: #b50000;'>" + cCount + "</span>"  ;
+   results13.innerHTML += "<span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
+   lucky.innerHTML = " Luckiest: <span style='color: #b50000'>" + currentLuckiest + "x</span>" + " &#149; Round:  <span style='color: #b50000'>" + luckiestRound + " </span>&#149; Odds: <span style='color: #b50000'>" + maxNV + " </span>&#149; Count: <span style='color: #b50000;'>" + cCount + "</span><br>";
 }
 console.log(Math.max(...iA).toFixed(4));
 
