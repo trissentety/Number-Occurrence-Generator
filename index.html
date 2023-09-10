@@ -1536,7 +1536,7 @@ var mocha = 1;
 iA.forEach(function (val, i, arr) {
     if (val < mocha && val > 0) {
         mocha = val
-        uA.splice(0, 1, 1)
+        uA[0] = mocha;
     }    
 }) 
 
