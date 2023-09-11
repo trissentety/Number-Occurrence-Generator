@@ -202,7 +202,7 @@ Expected Chance: 0.0000000666%
                 </div>
             </div>
         </div>
-        <h4 id="h4id" data-title=" Colors update after every round"><span style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
+        <h4 id="h4id" data-title=" Colors update after every round"><span id="spanID" style="color: #C967DA">Pink = 1%+ Below Average</span> | <span style="color: purple">Purple = Below Average</span> | <span style="color:green">Green = Above Average</span> | <span style="color:gold">Gold = 1%+ Above Average</span></h4>
         
         <div id="balancer">
             <h4 id ="balance"></h4>
@@ -211,9 +211,10 @@ Expected Chance: 0.0000000666%
         </div>
         <div id="lucky"><p></p></div>
         <div id="lucky2"><p></p></div>
+        <div id ="currentL"><p></p></div>
+        <div id ="currentL2"><p></p></div> 
             <div id="luckyMode">Switch to Lucky Mode</div>
             <div id="luckyMode2">Switch to Normal Mode</div>
-
     </div>
 
     <div id="center">
@@ -246,11 +247,20 @@ Expected Chance: 0.0000000666%
 
     h4 {
         font-size: 20px;   }
+        
+    #spanID {
+        text-align: center;
+        place-items: center;   }
 
     #center {
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+
+    #currentL, #currentL2{
+        font-size: 20px;
+        display: inline;
     }
     #lucky, #lucky2 {
         font-size: 20px;
@@ -417,6 +427,8 @@ var maxNV;
 var cCount;
 var uA = []
 
+var currentL = document.getElementById("currentL")
+var currentL2 = document.getElementById("currentL2")
 var headerDiv = document.getElementById("headerDiv")
 var num2 = document.getElementById("num2")
 var num3 = document.getElementById("num3")
@@ -1565,6 +1577,8 @@ if (luckiestHit2 < currentLuckiest2) {
 
 var luckiestHit = Math.max(...iA);
 var luckiestHitI = iA.indexOf(Math.max(...iA));
+currentL.innerHTML = "<span style='color: #C967DA'>Current Luckiest:</span><span style='color: #b50000'> " + luckiestHit2 + "x"
+currentL2.innerHTML = "<span style='color: gold'>Current Luckiest:</span><span style='color: #b50000'> " + luckiestHit.toFixed(2) + "x"
 luckiestRound = hdv;
 if (cCount > 1) {
 if (luckiestHit > currentLuckiest) {
