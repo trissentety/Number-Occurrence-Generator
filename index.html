@@ -3,7 +3,7 @@
     <title>Number Possibilities</title>
 </head>
 <body>
-    <h1>Odds of number occurring</h1>
+    <h1>Number Occurrence Overview</h1>
     <div id="masterDiv">
         <div id="headerDiv">Rounds: 0</div>
         <div id="splitDiv">
@@ -1484,19 +1484,6 @@ if (iA.indexOf(Math.max(...iA)) == 20) {
 }
 
 
-
-var luckiestHit2 = Math.min(...uA).toFixed(3);
-var mocha = 1;
-var latte = 1;
-iA2.forEach(function (val, i, arr) {
-    if (val < mocha && val > 0) {
-        mocha = val
-        uA[0] = mocha;
-        uAI[0] = i
-    }    
-}) 
-
-
 if (uAI[0] == 0) {
     maxNV2 = "1 / 2"
     cCount2 = n2v;
@@ -1584,6 +1571,19 @@ if (uAI[0] == 20) {
     maxNV2 = "1 / 1500000000"
     cCount2 = n1500000000v;
 }
+
+
+var luckiestHit2 = Math.min(...uA).toFixed(3);
+var mocha = 1;
+var latte = 1;
+iA2.forEach(function (val, i, arr) {
+    if (val < mocha && val > 0) {
+        mocha = val
+        uA[0] = mocha;
+        uAI[0] = i
+    }    
+}) 
+
 
 // if (1 / luckiestHit2 > luckiestHit) {
 //     currentL.innerHTML = "<span style='color: #C967DA'>Current Luckiest:</span><span style='color: #b50000'> " + luckiestHit2 + "x"
